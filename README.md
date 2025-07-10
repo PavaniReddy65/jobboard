@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 💼 JobBoard – Complete Job Listing Platform
 
 **JobBoard** is a full-featured **frontend web application** that allows users to explore job listings, view job details, and register or log in via a modal popup interface. It fetches job data dynamically from a **Django REST API** secured with **JWT authentication**.
@@ -244,3 +245,6 @@ Copy code
 If you want, I can also help generate a ZIP file with the project and placeholder images folder for screenshots.
 
 Would you like that?
+=======
+# jobboard
+>>>>>>> 9f5afe5fc251a739836f2f7fd374c27db6af0b18
