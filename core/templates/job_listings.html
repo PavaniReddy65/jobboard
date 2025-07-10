@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Listings</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        h1 { color: #333; }
+        .job { border: 1px solid #ccc; padding: 15px; margin: 10px 0; border-radius: 8px; }
+        .job-title { font-size: 20px; font-weight: bold; }
+        form { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Job Listings</h1>
+
+    <form method="get">
+        <input type="text" name="title" placeholder="Title">
+        <input type="text" name="location" placeholder="Location">
+        <input type="number" name="salary" placeholder="Min Salary">
+        <button type="submit">Search</button>
+    </form>
+
+    {% for job in jobs %}
+        <div class="job">
+            <div class="job-title">{{ job.title }}</div>
+            <div>{{ job.location }} | ₹{{ job.salary }}</div>
+            <p>{{ job.description }}</p>
+
+            {% if user.is_authenticated %}
+                <form method="post" action="{% url 'apply_job' job.id %}">
+                    {% csrf_token %}
+                    <button type="submit">Apply</button>
+                </form>
+            {% else %}
+                <p><a href="/admin/login/">Login to apply</a></p>
+            {% endif %}
+        </div>
+    {% empty %}
+        <p>No jobs found.</p>
+    {% endfor %}
+</body>
+</html>

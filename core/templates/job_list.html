@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Listings</title>
+</head>
+<body>
+    <h1>Job Listings</h1>
+    {% for job in jobs %}
+        <div>
+            <h2>{{ job.title }}</h2>
+            <p>{{ job.location }} | ₹{{ job.salary }}</p>
+            <p>{{ job.description }}</p>
+        </div>
+    {% empty %}
+        <p>No job listings available.</p>
+    {% endfor %}
+</body>
+</html>
