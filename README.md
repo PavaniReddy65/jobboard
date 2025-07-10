@@ -157,19 +157,16 @@ Replace these placeholders with actual screenshots of your application pages.
 2. Job Listings Section
     ![Jobs](screenshots/job_listingspng.jpg)
 
-3. Login Modal Popup
 
-4. Register Modal Popup
+
+3. Register Modal Popup
     ![Jobs](screenshots/registationmodel.jpg
 
     )
-
-5. About Section
-
-6. Contact Section
+4. Contact Section
     ![Jobs](screenshots/contact_section.jpg)
 
-7. Footer
+
 
 🖥️ How It Works (Step-by-Step)
 User visits site and sees:
